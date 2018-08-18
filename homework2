@@ -1,0 +1,30 @@
+Q1:
+def piecewise(f, g, b):
+    def h(x):
+        if x<b:
+            h = f
+        else:
+            h = g
+        return h(x)
+    return h
+def negate(x):
+    return -x
+def identity(x):
+    return x
+
+Q2:
+def repeated(f, n):
+    """Return the function that computes the nth application of f."""         
+    def h(x):
+        i=0
+        while i != n:
+            x = f(x)
+            i += 1
+        return x
+    return h
+def increment(x):
+    return x+1
+def triple(x):
+    return x*3
+def square(x):
+    return x*x
